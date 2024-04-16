@@ -1,0 +1,23 @@
+<br><br>
+<input type="username" placeholder="Enter Username" [(ngModel)]="user.username"(blur)="getUser()"><br><br>
+<input type="password" placeholder="Enter Password" [(ngModel)]="user.password"><br><br>
+<input type="mobno" placeholder="Enter Mobno" [(ngModel)]="user.mobno"><br><br>
+<input type="emailid" placeholder="Enter Emailid" [(ngModel)]="user.emailid"><br><br>
+<input type="button" value="saveUser" (click)="saveUser()"><br>
+<input type="button" value="deleteUser" (click)="deleteUser()">   <br> 
+{{message}}
+<table>
+    <tr>
+        <th>username</th>
+        <th>password</th>
+        <th>mobno</th>
+        <th>emailid</th>
+    </tr>
+    <tr *ngFor="let user of users">
+
+        <td>{{user.username}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.mobno}}</td>
+        <td>{{user.emailid}}</td>
+    </tr>
+</table>
